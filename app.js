@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', metaDataRouter);
-
+app.set('port', port);
 app.listen(port, () => {
   console.log("listening to port", port);
 });
