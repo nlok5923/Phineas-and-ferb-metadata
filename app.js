@@ -3,11 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+let port = process.env.port || 3001;
 
 var metaDataRouter = require('./routes/metaData');
 
 var app = express();
-const port = 3001;
 
 app.use(logger('dev'));
 app.use(express.json());
